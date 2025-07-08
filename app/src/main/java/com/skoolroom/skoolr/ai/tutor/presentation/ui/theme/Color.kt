@@ -1,4 +1,4 @@
-package com.skoolroom.skoolr.ai.tutor.ui.theme
+package com.skoolroom.skoolr.ai.tutor.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

@@ -1,4 +1,4 @@
-package com.skoolroom.skoolr.ai.tutor.ui.theme
+package com.skoolroom.skoolr.ai.tutor.presentation.ui.theme
 
 import android.app.Activity
 import android.os.Build
