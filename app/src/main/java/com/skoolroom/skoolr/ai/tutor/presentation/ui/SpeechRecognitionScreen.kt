@@ -51,6 +51,7 @@ import androidx.compose.ui.unit.sp
 import com.skoolroom.skoolr.ai.tutor.domain.model.SupportedLanguage
 import com.skoolroom.skoolr.ai.tutor.presentation.AiTutorContract
 import com.skoolroom.skoolr.ai.tutor.presentation.AiTutorViewModel
+import kotlinx.coroutines.delay
 import org.koin.androidx.compose.koinViewModel
 
 @Composable
@@ -148,10 +149,7 @@ fun SpeechRecognitionScreen() {
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Text(
-                    text = "😊",
-                    style = MaterialTheme.typography.displayLarge
-                )
+                TalkingEmojiFace(isTalking = state.isSpeaking)
                 Spacer(modifier = Modifier.height(16.dp))
                 Text(
                     text = state.recognizedText,

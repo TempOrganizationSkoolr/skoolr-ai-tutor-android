@@ -17,6 +17,14 @@ class AiTutorViewModel(
     AiTutorContract.State()
 ) {
 
+    init {
+        viewModelScope.launch {
+            ttsManager.isSpeaking.collect { isSpeaking ->
+                updateState { copy(isSpeaking = isSpeaking) }
+            }
+        }
+    }
+
     override fun handleEvent(event: AiTutorContract.Event) {
         when (event) {
             is AiTutorContract.Event.StartRecognition -> startRecognition()
